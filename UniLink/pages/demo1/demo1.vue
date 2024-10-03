@@ -11,10 +11,12 @@
 				<view class="t-a">
 					<image src="@/static/yz.png"></image>
 					<input type="number" name="code" maxlength="6" placeholder="请输入验证码" v-model="yzm" />
-					<view v-if="showText" class="t-c" @tap="getCode()">发送短信</view>
+					<view v-if="showText" class="t-c" @tap="getCode()">获取验证码</view>
 					<view v-else class="t-c" style="background-color: #A7A7A7;">重新发送({{ second }})</view>
 				</view>
-				<button @tap="login()">登 录</button>
+				<navigator url="/pages/demo3/demo3">
+					<button @tap="login()">登 录</button>
+				</navigator>
 				<view class="reg" @tap="reg()">注 册</view>
 			</form>
 			<view class="t-f"><text>————— 第三方账号登录 —————</text></view>
@@ -27,7 +29,7 @@
 	</view>
 </template>
 
-<script>
+<script >
 	export default {
 
 		data() {
@@ -58,6 +60,9 @@
 				}
 				//....此处省略，这里需要调用后台验证一下验证码是否正确，根据您的需求来
 				uni.showToast({ title: '登录成功！', icon: 'none' });
+				uni.switchTab({
+					url: "/pages/demo3/demo3"
+				})
 			},
 			//获取短信验证码
 			getCode() {
@@ -85,6 +90,9 @@
 			//注册按钮点击
 			reg() {
 				uni.showToast({ title: '注册跳转', icon: 'none' });
+				uni.navigateTo({
+					url: "/pages/demo2/demo2"
+				})
 			},
 			//等三方微信登录
 			wxLogin() {

@@ -2,20 +2,23 @@
 	<view class="content">
 		<view class="logo"><image src="../../static/applethrow.png" mode=""></image></view>
 		<view class="uni-form-item uni-column">
-			<input type="tel" class="uni-input" name="" placeholder="请输入手机号" />
+			<input type="tel" class="uni-input" name="" placeholder="请输入手机号" placeholder-style="color:#000" maxlength="11" />
 		</view>
 		<view class="uni-form-item uni-column column-with-btn">
-			<input type="text" class="uni-input" name="" placeholder="请输入图片验证码" v-model="captchaImg" />
+			<input type="text" class="uni-input" name="" placeholder="请输入图片验证码" placeholder-style="color:#000" v-model="captchaImg" />
 			<image src="../../static/captcha.jpg" mode="" class="img-captcha"></image>
 		</view>
 		<view class="uni-form-item uni-column column-with-btn">
-			<input type="number" class="uni-input" name="" placeholder="请输入验证码" />
+			<input type="number" class="uni-input" name="" placeholder="请输入验证码" placeholder-style="color:#000" />
 			<button :class="{active : !disableCodeBtn}" :disabled="disableCodeBtn" @tap="sendCode">{{codeBtn.text}}</button>
 		</view>
 		<view class="uni-form-item uni-column">
-			<input type="password" class="uni-input" name="" placeholder="请输入密码" />
+			<input type="password" class="uni-input" name="" placeholder="请输入密码"  placeholder-style="color:#000"/>
 		</view>
-		<button type="primary">注册</button>
+		<view class="uni-form-item uni-column">
+			<input type="password" class="uni-input" name="" placeholder="确认密码"  placeholder-style="color:#000"/>
+		</view>
+		<button type="primary" @tap="gotoLogin">注册</button>
 		<view class="links">已有账号？<view class="link-highlight" @tap="gotoLogin">点此登陆</view></view>
 	</view>
 </template>
@@ -54,7 +57,7 @@
 			},
 			gotoLogin: function () {
 				uni.navigateTo({
-					url: 'login'
+					url: "/pages/demo1/demo1"
 				})
 			}
 		},
@@ -97,9 +100,9 @@
 		justify-content: space-between;
 		align-items: center;
 		button{
-			font-size: 24upx;
+			font-size: 24rpx;
 			margin: 0;
-			width: 180upx;
+			width: 180rpx;
 			text-align: center;
 			&:after{
 				border: none
