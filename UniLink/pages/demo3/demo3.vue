@@ -22,12 +22,7 @@
 								<text class="project-domain">{{ project.domain }}</text>
 							</view>
 							<view class="project-info">
-								<!-- 								<text>需求人才类型: {{ project.requiredTalent }}</text>
-								<br>
-								<view class="know-more-flex">
-								<text>剩余空位: {{ project.vacancies }}</text>
-								<text class="know-more-blue">了解详细</text>
-								</view> -->
+
 								<text>需求人才类型：</text><text style="text-decoration: underline;">{{ project.requiredTalent }}</text>
 
 								<br>
