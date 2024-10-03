@@ -1,29 +1,15 @@
 <template>
 	<view class="content">
 		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
+		<view class="text-area">欢迎登录</view>
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
+<script setup>
 
-		},
-		methods: {
-
-		}
-	}
 </script>
 
-<style>
+<style lang="scss">
 	.content {
 		display: flex;
 		flex-direction: column;
