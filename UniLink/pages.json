@@ -54,6 +54,20 @@
 			{
 				"navigationBarTitleText" : "个人资料"
 			}
+		},
+		{
+			"path" : "pages/demo9/demo9",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/demo11/demo11",
+			"style" : 
+			{
+				"navigationBarTitleText" : "设置"
+			}
 		}
 		
 	],

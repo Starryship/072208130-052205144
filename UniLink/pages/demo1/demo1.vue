@@ -106,7 +106,7 @@
 	};
 </script>
 
-<style>
+<style lang="scss" scoped>
 	.blue{
 		width:100%;
 	}

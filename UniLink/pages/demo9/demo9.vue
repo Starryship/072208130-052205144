@@ -1,20 +1,13 @@
 <template>
   <view id="app">
     <view class="container">
-      <!-- Header Section with Title and Edit Icon -->
-      <view class="header">
-        <h2>个人资料</h2>
-      </view>
-	  <view class="">
-		<img src="/static/Edit3.png" class="icon edit-icon"></img>
-		<span>编辑</span>
-	  </view>
+      <h2>伙伴资料</h2>
+      
       <!-- Profile Section -->
       <view class="profile-section">
-        <view>
-          <label>姓名</label>
-          <input v-model="formData.name" placeholder="Name" />
-        </view>
+        <label>姓名</label>
+        <input v-model="formData.name" placeholder="Name" />
+
         <view class="profile-picture">
           <img :src="formData.imageUrl" alt="profile" />
         </view>
@@ -29,17 +22,10 @@
         <label>学号</label>
         <input v-model="formData.studentId" placeholder="Student ID" />
       </view>
-
-      <!-- Contact Info -->
-      <view class="field contact-info">
+      <view class="field">
         <label>联系方式</label>
         <input v-model="formData.email" placeholder="email" />
         <input v-model="formData.phone" placeholder="phone" />
-        <!-- Privacy Settings Icon -->
-        <view class="privacy-settings">
-          <i class="icon settings-icon"></i>
-          <span @tap="pr_edit()">隐私设置</span>
-        </view>
       </view>
 
       <!-- Interests Section -->
@@ -56,31 +42,32 @@
     </view>
   </view>
 </template>
+
 <script>
-	export default {
-	  data() {
-		return {
-		  formData: {
-			name: 'Bob',
-			major: '',
-			studentId: '',
-			email: '',
-			phone: '',
-			interests: '',
-			projects: '',
-			imageUrl: 'static/toux3.jpg', // Updated profile image
-		  },
-		};
-	  },
-	  onLoad() {},
-	  methods: {
-		//隐私设置
-		pr_edit() {
-			uni.navigateTo({url: "/pages/demo11/demo11"})
-		}
-	  }
-	}
+export default {
+  data() {
+    return {
+      formData: {
+        name: 'Bob',
+        major: '',
+        studentId: '',
+        email: '',
+        phone: '',
+        interests: '',
+        projects: '',
+        imageUrl: '/static/toux2.jpg', // Placeholder profile image URL
+      },
+    };
+  },
+  methods: {
+    goTo(page) {
+      // Navigation logic here
+      console.log(`Navigating to ${page}`);
+    },
+  },
+};
 </script>
+
 <style scoped>
 template {
   font-family: Arial, sans-serif;
@@ -96,13 +83,10 @@ template {
   border-radius: 10px;
   margin: 15px;
 }
+
 h2 {
   text-align: center;
   color: #333;
-}
-.icon {
-  font-size: 20px;
-  cursor: pointer;
 }
 
 .profile-section {
@@ -114,6 +98,7 @@ h2 {
 .profile-picture img {
   width: 60px;
   height: 60px;
+  margin: 20px;
   border-radius: 50%;
 }
 
@@ -138,26 +123,7 @@ input, textarea {
 
 textarea {
   resize: none;
-  height: 60px;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.privacy-settings {
-  display: flex;
-  align-items: center;
-  color: #666;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.settings-icon::before {
-  content: "⚙️";
-  font-size: 20px;
-  margin-right: 5px;
+  height: 82px;
 }
 </style>
+
