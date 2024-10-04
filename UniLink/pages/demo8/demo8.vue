@@ -47,10 +47,17 @@ export default {
   data() {
     return {
       contacts: [
+		{
+		  id: 0,
+		  name: '共谋大事组',
+		  avatar: '/static/toux1.jpg',
+		  lastMessage: 'Hey, how are you?',
+		  messages: [],
+		},
         {
           id: 1,
           name: '张栋',
-          avatar: '/static/toux13.jpg',
+          avatar: '/static/toux1.jpg',
           lastMessage: 'Hey, how are you?',
           messages: [
             { id: 1, text: '你们的项目完成的怎么样了?', sender: '张栋', time: '10:01 AM' },
@@ -133,6 +140,22 @@ export default {
     };
   },
   methods: {
+	onMounted(() => {
+		// 使用 getCurrentPages 获取当前页面栈
+		const pages = getCurrentPages();
+		const currentPage = pages[pages.length - 1]; // 获取当前页面实例
+	
+		// 从当前页面实例中获取路由参数 options
+		const options = currentPage.options;
+		const projectId = options.id; // 获取 id 参数
+		// 模拟项目数据（实际中应从接口获取）
+		// 查找对应 ID 的项目数据
+		project.value = contacts.find(p => p.id === Number(projectId)) || null;
+	
+		if (!project.value) {
+			console.error(`未找到ID为 ${projectId} 的项目`);
+		}
+	});
 	nav(){
 		uni.navigateTo({
 			url:"/pages/demo9/demo9"
@@ -174,7 +197,7 @@ export default {
   },
   mounted() {
     // 默认选择第一个联系人
-    this.currentContact = this.contacts[0];
+    this.currentContact = this.contacts[1];
   }
 };
 </script>
