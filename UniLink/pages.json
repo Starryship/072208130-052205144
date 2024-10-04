@@ -24,7 +24,7 @@
 			"path" : "pages/demo7/demo7",
 			"style" : 
 			{
-				"navigationBarTitleText" : ""
+				"navigationBarTitleText" : "组"
 			}
 		},
 		{
@@ -45,7 +45,7 @@
 			"path" : "pages/demo6/demo6",
 			"style" : 
 			{
-				"navigationBarTitleText" : "组"
+				"navigationBarTitleText" : "日程安排表"
 			}
 		},
 		{
@@ -67,6 +67,20 @@
 			"style" : 
 			{
 				"navigationBarTitleText" : "设置"
+			}
+		},
+		{
+			"path" : "pages/test/test",
+			"style" : 
+			{
+				"navigationBarTitleText" : "测试"
+			}
+		},
+		{
+			"path" : "pages/demo8/demo8",
+			"style" : 
+			{
+				"navigationBarTitleText" : "聊天"
 			}
 		}
 		
@@ -94,7 +108,7 @@
 				"selectedIconPath": "static/pic/Book open(1).png"
 			},
 			{
-				"pagePath": "pages/demo6/demo6",
+				"pagePath": "pages/demo7/demo7",
 				"text": "group",
 				"iconPath":"static/pic/Users.png",
 				"selectedIconPath": "static/pic/Users (1).png"
