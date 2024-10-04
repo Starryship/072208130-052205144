@@ -52,18 +52,26 @@ import {
 export default {
   data() {
     return {
+<<<<<<< HEAD
       contacts1: [
+=======
+      contacts: [
+>>>>>>> 1af015f23ddf20b67d0400a7e68dd6652ce6c5cb
 		{
 		  id: 0,
 		  name: '共谋大事组',
 		  avatar: '/static/toux1.jpg',
 		  lastMessage: 'Hey, how are you?',
+<<<<<<< HEAD
 		  messages: []
+=======
+		  messages: [],
+>>>>>>> 1af015f23ddf20b67d0400a7e68dd6652ce6c5cb
 		},
         {
           id: 1,
           name: '张栋',
-          avatar: '/static/toux13.jpg',
+          avatar: '/static/toux1.jpg',
           lastMessage: 'Hey, how are you?',
           messages: [
             { id: 1, text: '你们的项目完成的怎么样了?', sender: '张栋', time: '10:01 AM' },
@@ -153,6 +161,22 @@ export default {
  //    this.mounted(contactId); // 根据 id 查找联系人
  //  },
   methods: {
+	onMounted(() => {
+		// 使用 getCurrentPages 获取当前页面栈
+		const pages = getCurrentPages();
+		const currentPage = pages[pages.length - 1]; // 获取当前页面实例
+	
+		// 从当前页面实例中获取路由参数 options
+		const options = currentPage.options;
+		const projectId = options.id; // 获取 id 参数
+		// 模拟项目数据（实际中应从接口获取）
+		// 查找对应 ID 的项目数据
+		project.value = contacts.find(p => p.id === Number(projectId)) || null;
+	
+		if (!project.value) {
+			console.error(`未找到ID为 ${projectId} 的项目`);
+		}
+	});
 	nav(){
 		uni.navigateTo({
 			url:"/pages/demo9/demo9"
@@ -194,11 +218,15 @@ export default {
   },
   mounted() {
     // 默认选择第一个联系人
+<<<<<<< HEAD
 	const contactId = this.$route.query.id; // 获取 URL 中的 id 参数
 	console.log(contactId);
 	this.ID=contactId;
 	console.log(this.ID);
     this.currentContact = this.contacts1[this.ID];
+=======
+    this.currentContact = this.contacts[1];
+>>>>>>> 1af015f23ddf20b67d0400a7e68dd6652ce6c5cb
   }
 };
 </script>
