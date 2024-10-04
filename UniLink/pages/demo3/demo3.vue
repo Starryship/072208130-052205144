@@ -8,7 +8,13 @@
 			<image src="/static/pic/Leading icon.png" class="search-icon" @click="onSearch" mode="aspectFit"
 				style="width: 40px; height: 40px;" />
 		</view>
-
+	<!-- 	<view>
+			<text>项目推荐</text>
+			<hr>
+			<br>
+			
+			
+		</view> -->
 
 		<view>
 			<view class="uni-padding-wrap uni-common-mt">
@@ -29,7 +35,12 @@
 								<text>导师：</text><text style="text-decoration: underline;">{{project.mentor}}</text>
 								<br>
 								<text>剩余空位：</text><text style="text-decoration: underline;">{{ project.vacancies }}</text>
-								<text class="know-more-blue">了解详细>></text>
+								
+								
+								<!-- <text class="know-more-blue"><span @tap="pr_know_more()">了解详细>></span></text> -->
+								
+								<text class="know-more-blue" @tap="pr_know_more(project.id)">了解详细>></text>
+								
 							</view>
 						</view>
 
@@ -61,6 +72,7 @@
 
 			// 定义项目列表数据
 			const projectList = ref([{
+					id:1,
 					name: '垃圾邮件过滤',
 					domain: '机器学习',
 					requiredTalent: '数学高手',
@@ -68,6 +80,7 @@
 					vacancies: 2
 				},
 				{
+					id:2,
 					name: '自然语言至图查询语言翻译',
 					domain: '人工智能',
 					requiredTalent: '大模型微调',
@@ -75,6 +88,7 @@
 					vacancies: 1
 				},
 				{
+					id:3,
 					name: '跨专业项目合作app',
 					domain: '软件工程',
 					requiredTalent: '软件工程师，前后端设计',
@@ -82,6 +96,7 @@
 					vacancies: 3
 				},
 				{
+					id:4,
 					name: '淘宝数据爬取',
 					domain: '爬虫',
 					requiredTalent: 'js逆向',
@@ -89,6 +104,7 @@
 					vacancies: 4
 				},
 				{
+					id:5,
 					name: '淘宝数据分析',
 					domain: '大数据',
 					requiredTalent: '数据分析师',
@@ -118,14 +134,39 @@
 					icon: 'none'
 				});
 			};
+			
+		    // const pr_know_more = () => {
+		    //   uni.navigateTo({ url: '/pages/demo5/demo5' });
+		    // };
+			
+		    const pr_know_more = (id) => {
+		      // 跳转到指定的项目详情页面，并传递项目 ID 作为查询参数
+		      uni.navigateTo({
+		        url: `/pages/demo3/projectDetail/projectDetail?id=${id}`,
+		        success: () => {
+		          console.log(`成功跳转到项目 ID 为 ${id} 的详情页面`);
+		        },
+		        fail: (err) => {
+		          console.error('跳转失败：', err);
+		        }
+		      });
+		    };
+			
 
 			return {
 				searchQuery,
 				onSearch,
 				projectList,
 				filteredProjects,
+				pr_know_more,
 			};
-		}
+		},
+		
+
+		
+		
+		
+		
 	};
 </script>
 
