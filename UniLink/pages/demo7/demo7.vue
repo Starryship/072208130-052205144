@@ -47,11 +47,7 @@ export default {
 		{ id: 12, name: '郑❤艺', avatar: 'static/toux5.jpg', status: 'Offline' }, 
         // 可以根据需要添加更多联系人  
       ],  
-<<<<<<< HEAD
       selectedContact: null,
-=======
-      selectedContact(),  
->>>>>>> 1af015f23ddf20b67d0400a7e68dd6652ce6c5cb
 	  visible: false,
     };  
   },  
