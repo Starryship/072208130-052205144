@@ -29,7 +29,7 @@
 								<text>导师：</text><text style="text-decoration: underline;">{{project.mentor}}</text>
 								<br>
 								<text>剩余空位：</text><text style="text-decoration: underline;">{{ project.vacancies }}</text>
-								<text class="know-more-blue">了解详细</text>
+								<text class="know-more-blue">了解详细>></text>
 							</view>
 						</view>
 
@@ -158,7 +158,7 @@
 	}
 
 	.project-card {
-		background-color: #ffffff;
+		background-color: rgb(42,173,255,0.1);
 		padding: 20px;
 		margin-bottom: 15px;
 		border: 1px solid #e0e0e0;
@@ -188,7 +188,7 @@
 		display: flex;
 		justify-content: flex-end;
 		color: #4493f8;
-		font-size: 10px;
+		font-size: 15px;
 	}
 
 	.project-name {
