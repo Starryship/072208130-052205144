@@ -16,7 +16,7 @@
 		</h2>
   </view>
   <hr class="hr"/>
-  <view class="contact-selector">  
+  <view class="contact-selector" style="padding-left: 1px;">  
     <ul>  
       <li v-for="contact in contacts" :key="contact.id" @click="selectContact(contact)">  
         <img :src="contact.avatar" alt="Contact Avatar" class="avatar" />  

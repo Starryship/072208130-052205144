@@ -82,6 +82,13 @@
 			{
 				"navigationBarTitleText" : "聊天"
 			}
+		},
+		{
+			"path" : "pages/demo3/projectDetail/projectDetail",
+			"style" : 
+			{
+				"navigationBarTitleText" : "项目详细"
+			}
 		}
 		
 	],
