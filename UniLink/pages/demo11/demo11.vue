@@ -9,6 +9,15 @@
         </label>  
       </view>  
     </view>  
+	
+	<!-- 展开更多内容 -->
+    <view class="more-content">
+      <span @click="toggleMoreContent">点击展开更多内容</span>
+      <view v-if="showMoreContent" class="extra-content">
+        <p>啊哦，没有更多内容了...</p>
+      </view>
+    </view>
+	
 	<view class="buttons">
 		<button @click="saveSettings"><b>保存设置</b></button>  
 	</view>
@@ -29,9 +38,13 @@ export default {
         { label: '项目三：是否展示在个人资料页', value: 'option3' },  
       ],  
       selectedOptions: [],  
+	  showMoreContent: false,
     };  
   },  
-  methods: {  
+  methods: { 
+	toggleMoreContent() {
+	      this.showMoreContent = !this.showMoreContent;
+	    },
     logout() {  
       // 实现退出登录的逻辑  
       alert('已退出!');  
@@ -95,7 +108,7 @@ h1 {
 }  
   
 button {  
-  margin-top: 50px; 
+  margin-top: 40px; 
   padding: 10px 20px;  
   background-color: rgb(42,173,255,0.5);
   font-size: 20px;
@@ -112,4 +125,15 @@ button {
 button:hover {  
   background-color: #0056b3;  
 }  
+.more-content {
+  margin-top:20px ;
+  margin-bottom: 20px;
+  color: #007BFF;
+  cursor: pointer;
+}
+.extra-content {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
 </style>
