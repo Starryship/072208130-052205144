@@ -44,7 +44,7 @@ export default {
 		{ id: 8, name: '严加一', avatar: 'static/toux6.jpg', status: 'Offline' }, 
 		{ id: 9, name: '黄馨贻', avatar: 'static/toux15.jpg', status: 'Offline' }, 
 		{ id: 10, name: '韦❤茹', avatar: 'static/toux4.jpg', status: 'Offline' }, 
-		{ id: 12, name: '郑❤艺', avatar: 'static/toux5.jpg', status: 'Offline' }, 
+		{ id: 11, name: '郑❤艺', avatar: 'static/toux5.jpg', status: 'Offline' }, 
         // 可以根据需要添加更多联系人  
       ],  
       selectedContact: null,
