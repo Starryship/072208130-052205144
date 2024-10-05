@@ -32,8 +32,11 @@
 							<!-- <view>{{ item.value }}</view> -->
 						</label>
 					</checkbox-group>
+
+					<button class="apply-buttom" @click="handleClick">申请加入项目</button>
 				</view>
-				<button class="apply-buttom" @click="handleClick">申请加入项目</button>
+
+
 
 			</view>
 
@@ -138,14 +141,16 @@
 			onMounted(() => {
 				// 使用 getCurrentPages 获取当前页面栈
 				const pages = getCurrentPages();
-				console.log(pages);
 				const currentPage = pages[pages.length - 1]; // 获取当前页面实例
-				console.log(currentPage);
+
 				// 从当前页面实例中获取路由参数 options
 				const options = currentPage.options;
-				console.log(options);
 				const projectId = options.id; // 获取 id 参数
+
+
 				// 模拟项目数据（实际中应从接口获取）
+
+
 				// 查找对应 ID 的项目数据
 				project.value = projects.find(p => p.id === Number(projectId)) || null;
 
@@ -175,13 +180,18 @@
 
 			const handleClick = () => {
 				//    alert('按钮被点击了');
+
 				// 显示提示框
 				uni.showToast({
 					title: '申请已提交', // 提示内容
 					icon: 'success', // 图标类型
 					duration: 2000 // 持续时间，单位为毫秒
 				});
+
+
 			};
+
+
 			return {
 				project,
 				checkboxItems,
@@ -213,7 +223,7 @@
 		margin-bottom: 15px;
 		border: 1px solid #e0e0e0;
 		border-radius: 10px;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
 		justify-content: center;
 		align-items: center;
@@ -235,6 +245,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+
 		height: 100vh;
 		/* 设置容器高度为整个屏幕高度*/
 		width: 100vw;
@@ -249,7 +261,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap:30px;
+
 		background-color: #ffffff;
 		height: 90%;
 		/* 设置容器高度为整个屏幕高度*/
@@ -260,8 +272,7 @@
 	}
 
 	.content {
-		margin-top: 0px;
-		padding: 0px 50px;
+		padding: 15px;
 		font-size: 15px;
 		color: #888888;
 		letter-spacing: 0.6px;
@@ -272,8 +283,8 @@
 		margin: 20px;
 		padding-top: 10px;
 		border-radius: 20px;
-		border: 2px solid rgba(0, 0, 0, 0.3);
-		height: 220px;
+		border: 2px solid #585858;
+		height: 60%;
 		/* 设置容器高度为整个屏幕高度*/
 		width: 93%;
 		margin-bottom: 10px;
@@ -287,14 +298,12 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		position: absolute;
-		margin-bottom: 30px;
-		height: 95%;
+
+		height: 85%;
 		/* 设置容器高度为整个屏幕高度*/
 		width: 90%;
-		overflow-y:auto;
 		border-radius: 20px;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+		box-shadow: 10px 20px 50px 10px rgba(0, 0, 0, 0.3);
 		background-color: rgb(178, 235, 255, 0.5);
 
 	}
@@ -303,16 +312,17 @@
 
 		font-size: 12px;
 
-		width: 150px;
+		width: 90px;
 		/* 设置按钮的宽度 */
 		height: 40px;
 
-		/* position: absolute; */
+		position: absolute;
 		/* 设置按钮为绝对定位 */
-		/* bottom: 35px; */
+		bottom: 6%;
 		/* 距离底部20px */
-		/* right: 118px; */
+		right: 60px;
 		/* 距离右边20px */
+		/*background-color: #1e90ff;  按钮背景色 */
 		color: black;
 		/* 按钮字体颜色 */
 		/*border: none;  去除边框 */
@@ -322,7 +332,8 @@
 		/* 按钮内边距 */
 		cursor: pointer;
 		/* 鼠标悬停效果 */
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+		box-shadow: 3px 3px 10px 0.1px rgba(0, 0, 0, 0.3);
+		background-color: rgb(216, 245, 255);
 
 	}
 </style>

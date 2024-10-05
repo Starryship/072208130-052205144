@@ -1,7 +1,7 @@
 <template>
   <view class="chat-app">
     <!-- 左侧联系人列表 -->
-    <view class="contact-list">
+<!--    <view class="contact-list">
       <view
         v-for="contact1 in contacts1"
         :key="contact1.id"
@@ -10,9 +10,9 @@
       >
         <img :src="contact1.avatar" alt="头像" class="avatar" />
       </view>
-    </view>
+    </view> -->
 
-    <!-- 右侧聊天窗口 -->
+    <!-- <!-- 右侧聊天窗口 -->
     <view class="chat-window">
       <view class="chat-header">
         <img :src="currentContact.avatar" alt="头像" class="avatar" @click="nav()"/>
@@ -28,7 +28,7 @@
           <p>{{ message.text }}</p>
           <span class="message-time">{{ message.time }}</span>
         </view>
-      </view>
+      </view> 
 
       <view class="chat-input">
         <input
@@ -200,6 +200,7 @@ export default {
 .chat-app {
   display: flex;
   height: 100vh;
+  width: 90vh;
   background-color: #f0f0f0;
 }
 
@@ -301,6 +302,7 @@ export default {
   padding: 10px;
   background-color: #fff;
   border-top: 1px solid #ddd;
+  width: 90vw;
 }
 
 .chat-input input {
