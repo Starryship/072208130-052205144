@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container" >
 		<!-- 搜索框 -->
 		<view class="search-bar">
 			<!-- 输入框 -->
@@ -8,17 +8,18 @@
 			<image src="/static/pic/Leading icon.png" class="search-icon" @click="onSearch" mode="aspectFit"
 				style="width: 40px; height: 40px;" />
 		</view>
-	<!-- 	<view>
-			<text>项目推荐</text>
-			<hr>
-			<br>
-			
-			
-		</view> -->
+					<view style="margin-bottom: 20px;">
+						<text class="recommend">项目推荐</text>
+						<br>
+						
+						
+					</view>
 
 		<view>
 			<view class="uni-padding-wrap uni-common-mt">
+
 				<view>
+
 					<scroll-view :scroll-top="scrollTop" scroll-y="true" class="scroll-Y" @scrolltoupper="upper"
 						@scrolltolower="lower" @scroll="scroll">
 						<!-- 卡片式项目展示 -->
@@ -35,10 +36,10 @@
 								<text>导师：</text><text style="text-decoration: underline;">{{project.mentor}}</text>
 								<br>
 								<text>剩余空位：</text><text style="text-decoration: underline;">{{ project.vacancies }}</text>
-								
+								<br>
 								
 								<!-- <text class="know-more-blue"><span @tap="pr_know_more()">了解详细>></span></text> -->
-								
+								<text>时间：</text><text style="text-decoration: underline;">{{project.time}}</text>
 								<text class="know-more-blue" @tap="pr_know_more(project.id)">了解详细>></text>
 								
 							</view>
@@ -77,6 +78,8 @@
 					domain: '机器学习',
 					requiredTalent: '数学高手',
 					mentor: '王石平',
+					time:"2024.09.12-2024.09.22",
+					
 					vacancies: 2
 				},
 				{
@@ -85,6 +88,7 @@
 					domain: '人工智能',
 					requiredTalent: '大模型微调',
 					mentor: '郭坤',
+					time:"2024.09.22-2024.11.22",
 					vacancies: 1
 				},
 				{
@@ -93,6 +97,7 @@
 					domain: '软件工程',
 					requiredTalent: '软件工程师，前后端设计',
 					mentor: '张栋',
+					time:"2024.10.01-2024.10.07",
 					vacancies: 3
 				},
 				{
@@ -101,6 +106,7 @@
 					domain: '爬虫',
 					requiredTalent: 'js逆向',
 					mentor: '吴伶',
+					time:"2024.09.15-2024.09.27",
 					vacancies: 4
 				},
 				{
@@ -109,6 +115,7 @@
 					domain: '大数据',
 					requiredTalent: '数据分析师',
 					mentor: '陈羽中',
+					time:"2024.10.12-2024.11.12",
 					vacancies: 4
 				},
 
@@ -213,6 +220,18 @@
 		margin-bottom: 10px;
 
 	}
+
+.recommend{
+
+	background-color: rgb(146,226,255);
+	width: 30px;
+	height: 30px;
+	font-size: 15px;
+	border-radius: 10px;
+	padding: 10px;
+	
+	
+}
 
 	.know-more-flex {
 		display: flex;
