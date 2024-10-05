@@ -3,12 +3,12 @@
     <!-- 左侧联系人列表 -->
     <view class="contact-list">
       <view
-        v-for="contact in contacts"
-        :key="contact.id"
-        :class="['contact-item', { active: contact.id === currentContact.id }]"
-        @click="selectContact(contact)"
+        v-for="contact1 in contacts1"
+        :key="contact1.id"
+        :class="['contact-item', { active: contact1.id === currentContact.id }]"
+        @click="selectContact(contact1)"
       >
-        <img :src="contact.avatar" alt="头像" class="avatar" />
+        <img :src="contact1.avatar" alt="头像" class="avatar" />
       </view>
     </view>
 
@@ -43,14 +43,27 @@
   </view>
 </template>
 <script>
+import {
+	ref,
+	onMounted,
+	getCurrentInstance,
+	computed
+} from 'vue'; // 引入 onMounted 和 getCurrentInstance
 export default {
   data() {
     return {
-      contacts: [
+      contacts1: [
+		{
+		  id: 0,
+		  name: '共谋大事组',
+		  avatar: '/static/toux1.jpg',
+		  lastMessage: 'Hey, how are you?',
+		  messages: [],
+		},
         {
           id: 1,
           name: '张栋',
-          avatar: '/static/toux13.jpg',
+          avatar: '/static/toux1.jpg',
           lastMessage: 'Hey, how are you?',
           messages: [
             { id: 1, text: '你们的项目完成的怎么样了?', sender: '张栋', time: '10:01 AM' },
@@ -129,7 +142,8 @@ export default {
 		},
       ],
       currentContact: null, // 当前选中的联系人
-      newMessage: '' // 新消息输入框
+      newMessage: '' ,// 新消息输入框
+	  ID: null,
     };
   },
   methods: {
@@ -139,8 +153,8 @@ export default {
 		})
 	},
     // 选择联系人进行聊天
-    selectContact(contact) {
-      this.currentContact = contact;
+    selectContact(contact1) {
+      this.currentContact = contact1;
       this.$nextTick(() => {
         // 自动滚动到最新消息
         this.scrollToBottom();
@@ -174,7 +188,11 @@ export default {
   },
   mounted() {
     // 默认选择第一个联系人
-    this.currentContact = this.contacts[0];
+	const contactId = this.$route.query.id; // 获取 URL 中的 id 参数
+	console.log(contactId);
+	this.ID=contactId;
+	console.log(this.ID);
+    this.currentContact = this.contacts1[this.ID];
   }
 };
 </script>

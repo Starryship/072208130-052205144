@@ -29,25 +29,25 @@
   
 <script>  
 export default {  
+  
   data() {  
     return {  
       contacts: [  
-		{ id: 0, name: '共谋大事组', avatar: 'static/toux1.jpg', status: '' },  
+		{ id: 0, name: '共谋大事组', avatar: 'static/toux1.jpg', status: 'Online' },  
         { id: 1, name: 'tutor:张栋', avatar: 'static/toux13.jpg', status: 'Online' },  
-        { id: 2, name: '曹星辰', avatar: 'static/toux3.jpg', status: 'Online' },  
-        { id: 3, name: '张诗雨', avatar: 'static/toux2.jpg', status: 'Online' }, 
-		{ id: 4, name: '詹镇號', avatar: 'static/toux10.jpg', status: 'Online' }, 
-		{ id: 5, name: '刘哲锐', avatar: 'static/toux12.jpg', status: 'Away' }, 
-		{ id: 6, name: '黄悦迦', avatar: 'static/toux7.jpg', status: 'Away' }, 
-		{ id: 7, name: '朱佳捷', avatar: 'static/toux14.jpg', status: 'Away' }, 
-		{ id: 8, name: '吴三丰', avatar: 'static/toux8.jpg', status: 'Offline' }, 
-		{ id: 9, name: '严加一', avatar: 'static/toux6.jpg', status: 'Offline' }, 
-		{ id: 10, name: '黄馨贻', avatar: 'static/toux15.jpg', status: 'Offline' }, 
-		{ id: 11, name: '韦❤茹', avatar: 'static/toux4.jpg', status: 'Offline' }, 
+        { id: 2, name: '张诗雨', avatar: 'static/toux2.jpg', status: 'Online' }, 
+		{ id: 3, name: '詹镇號', avatar: 'static/toux10.jpg', status: 'Online' }, 
+		{ id: 4, name: '刘哲锐', avatar: 'static/toux12.jpg', status: 'Away' }, 
+		{ id: 5, name: '黄悦迦', avatar: 'static/toux7.jpg', status: 'Away' }, 
+		{ id: 6, name: '朱佳捷', avatar: 'static/toux14.jpg', status: 'Away' }, 
+		{ id: 7, name: '吴三丰', avatar: 'static/toux8.jpg', status: 'Offline' }, 
+		{ id: 8, name: '严加一', avatar: 'static/toux6.jpg', status: 'Offline' }, 
+		{ id: 9, name: '黄馨贻', avatar: 'static/toux15.jpg', status: 'Offline' }, 
+		{ id: 10, name: '韦❤茹', avatar: 'static/toux4.jpg', status: 'Offline' }, 
 		{ id: 12, name: '郑❤艺', avatar: 'static/toux5.jpg', status: 'Offline' }, 
         // 可以根据需要添加更多联系人  
       ],  
-      selectedContact: null,  
+      selectedContact: null,
 	  visible: false,
     };  
   },  
@@ -60,10 +60,25 @@ export default {
     selectContact(contact) {  
       this.selectedContact = contact;  
       // 这里可以添加跳转到聊天页面的代码，例如使用vue-router  
-      console.log('Selected contact:', contact);  
+      console.log('Selected contact:', this.selectedContact.id);  
+	  if (this.selectedContact && (this.selectedContact.id || this.selectedContact.id===0)) {
+	    console.log(this.selectedContact.id);
+		uni.navigateTo({
+		  url: `/pages/demo8/demo8?id=${this.selectedContact.id}`,
+		  success: () => {
+		    console.log(`成功跳转到项目 ID 为 ${this.selectedContact.id} 的详情页面`);
+		  },
+		  fail: (err) => {
+		    console.error('跳转失败：', err);
+		  }
+		});
+	  } else {
+	    console.error('selectedContact 未定义或没有 id');
+	  }
+
       // 假设你有一个方法或路由可以导航到聊天页面  
-      // this.$router.push({ name: 'Chat', params: { contactId: contact.id } });  
-	  // this.$router.push({ name: 'ContactDetail', params: { id: contact.id, contact: contact } });
+      this.$router.push({ name: 'Chat', params: { contactId: contact.id } });  
+	  this.$router.push({ name: 'ContactDetail', params: { id: contact.id, contact: contact } });
     },  
 	openPopup() {  
 	      this.visible = true;  
