@@ -63,7 +63,7 @@ export default {
         {
           id: 1,
           name: '张栋',
-          avatar: '/static/toux1.jpg',
+          avatar: '/static/toux13.jpg',
           lastMessage: 'Hey, how are you?',
           messages: [
             { id: 1, text: '你们的项目完成的怎么样了?', sender: '张栋', time: '10:01 AM' },
@@ -96,8 +96,8 @@ export default {
 		  avatar: '/static/toux12.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:01 AM' },
-		    { id: 5, text: 'wa', sender: '刘哲锐', time: '10:02 AM' }
+		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:02 AM' },
+		    { id: 5, text: 'wa', sender: '刘哲锐', time: '10:15 AM' }
 		  ]
 		},
 		{
@@ -106,8 +106,8 @@ export default {
 		  avatar: '/static/toux7.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:01 AM' },
-		    { id: 6, text: '瓦', sender: '黄悦迦', time: '10:02 AM' }
+		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:03 AM' },
+		    { id: 6, text: '瓦', sender: '黄悦迦', time: '10:15 AM' }
 		  ]
 		},
 		{
@@ -116,8 +116,8 @@ export default {
 		  avatar: '/static/toux14.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:01 AM' },
-		    { id: 7, text: '瓦？', sender: '朱佳捷', time: '10:02 AM' }
+		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:04 AM' },
+		    { id: 7, text: '瓦？', sender: '朱佳捷', time: '10:15 AM' }
 		  ]
 		},
 		{
@@ -126,8 +126,8 @@ export default {
 		  avatar: '/static/toux8.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:01 AM' },
-		    { id: 8, text: '瓦罗兰特', sender: '吴三丰', time: '10:02 AM' }
+		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:05 AM' },
+		    { id: 8, text: '瓦罗兰特', sender: '吴三丰', time: '10:15 AM' }
 		  ]
 		},
 		{
@@ -136,8 +136,38 @@ export default {
 		  avatar: '/static/toux6.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:01 AM' },
-		    { id: 9, text: '启动！！', sender: '严加一', time: '10:02 AM' }
+		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:06 AM' },
+		    { id: 9, text: '启动！！', sender: '严加一', time: '10:15 AM' }
+		  ]
+		},
+		{
+		  id: 10,
+		  name: '黄馨贻',
+		  avatar: '/static/toux15.jpg',
+		  lastMessage: 'Hey, how are you?',
+		  messages: [
+		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:07 AM' },
+		    { id: 10, text: '好好好，马上马上', sender: '黄馨贻', time: '10:12 AM' }
+		  ]
+		},
+		{
+		  id: 11,
+		  name: '韦❤茹',
+		  avatar: '/static/toux4.jpg',
+		  lastMessage: 'Hey, how are you?',
+		  messages: [
+		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:08 AM' },
+		    { id: 9, text: '我是一枚小可爱', sender: '韦❤茹', time: '10:10 AM' }
+		  ]
+		},
+		{
+		  id: 12,
+		  name: '郑❤艺',
+		  avatar: '/static/toux5.jpg',
+		  lastMessage: 'Hey, how are you?',
+		  messages: [
+		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:09 AM' },
+		    { id: 9, text: '小韦帮我做，你找她', sender: '郑❤艺', time: '10:10 AM' }
 		  ]
 		},
       ],
@@ -245,8 +275,8 @@ export default {
 }
 
 .chat-window {
-  width: 75%;
-  height: 800px;
+  width: 100vw;
+  height: 95vh;
   display: flex;
   flex-direction: column;
 }
@@ -256,7 +286,7 @@ export default {
   padding: 20px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #999;
 }
 
 .chat-header h4 {
@@ -265,6 +295,8 @@ export default {
 
 .chat-content {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   overflow-y:auto;
   background-color: #f9f9f9;
@@ -272,7 +304,7 @@ export default {
 
 .chat-message {
   margin-bottom: 25px;
-  max-width: 80%;
+  max-width: 70%;
   padding: 10px;
   border-radius: 8px;
   position: relative;
@@ -282,6 +314,7 @@ export default {
   background-color: #007bff;
   color: white;
   align-self: flex-end;
+  position: relative;
 }
 
 .received {
@@ -302,7 +335,8 @@ export default {
   padding: 10px;
   background-color: #fff;
   border-top: 1px solid #ddd;
-  width: 90vw;
+  width: 95vw;
+  height: 7vh;
 }
 
 .chat-input input {
