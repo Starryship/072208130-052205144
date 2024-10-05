@@ -48,6 +48,14 @@ export default {
     logout() {  
       // 实现退出登录的逻辑  
       alert('已退出!');  
+	  
+	  uni.removeStorage({
+	    key: 'projectData',
+	    success: () => {
+	      console.log('临时数据已删除');
+	    }
+	  });
+	  
 	  uni.navigateTo({
 	  	url: "/pages/demo1/demo1"
 	  })

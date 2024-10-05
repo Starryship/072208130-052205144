@@ -18,6 +18,9 @@
 					<br />
 					<span class="thick">已加入队员：</span><text v-for="(member, index) in project.member"
 						:key="index">{{ member }}<span v-if="index < project.member.length - 1">, </span></text>
+				<br/>
+				<span class="thick">时间：</span><text>{{ project.time }}</text>
+				
 				</view>
 				<view class="task">
 					<text class="content">任务列表</text>
@@ -71,7 +74,7 @@
 					requiredTalent: '数学高手',
 					mentor: '王石平',
 					vacancies: 2,
-
+time:"2024.09.12-2024.09.22",
 
 
 					inroduction: "过滤垃圾邮件",
@@ -90,7 +93,7 @@
 					requiredTalent: '大模型微调',
 					mentor: '郭坤',
 					vacancies: 1,
-
+time:"2024.09.22-2024.11.22",
 
 					inroduction: "小样本条件下的自然与原至图查询语言翻译大模型微调",
 					target: "参赛者需要使用提供的在TuGraph-DB上可执行的Cypher语料，对一个指定的本地模型进行微调。",
@@ -104,7 +107,7 @@
 					requiredTalent: '软件工程师，前后端设计',
 					mentor: '张栋',
 					vacancies: 3,
-
+time:"2024.10.01-2024.10.07",
 					inroduction: "UniLink 表达了连接不同学科、不同背景的大学生，建立跨学科交流的桥梁。",
 					target: "根据用户需求，设计一个app",
 					member: ["晨纸红"],
@@ -117,7 +120,7 @@
 					requiredTalent: 'js逆向',
 					mentor: '吴伶',
 					vacancies: 4,
-
+time:"2024.09.15-2024.09.27",
 					inroduction: "该项目需要攻克淘宝的反爬机制，使我们能正常获取淘宝的数据",
 					target: "爬取淘宝的商品数据，用作数据分析",
 					member: ["无"],
@@ -130,7 +133,7 @@
 					requiredTalent: '数据分析师',
 					mentor: '陈羽中',
 					vacancies: 4,
-
+time:"2024.10.12-2024.11.12",
 					inroduction: "面对海量数据，需要对数据进行处理，然后对数据进行分析",
 					target: "挖掘出数据的价值",
 					member: ["朝星彩","账室阅"],
