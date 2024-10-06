@@ -1,3 +1,11 @@
+<template>
+	</template>
+	<script>
+		</script>
+		<style>
+			</style>
+
+
 <!-- <template>
 	<view class="content">
 		<view class="cropper-wrapper" style="height:617px">
