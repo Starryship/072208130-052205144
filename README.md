@@ -138,3 +138,9 @@
 点击以下链接即可安装：https://github.com/Starryship/UniLink/releases/download/v1.0/UniLink.apk
 
 移动端点击后可以直接安装，pc端点击则需将下载后的apk文件发送给移动端，使用移动端安装。
+
+
+#### 小程序
+
+------
+目前是打算上传到微信小程序端，但是备案还在审核中，敬请期待~
