@@ -70,13 +70,6 @@
 			}
 		},
 		{
-			"path" : "pages/test/test",
-			"style" : 
-			{
-				"navigationBarTitleText" : "测试"
-			}
-		},
-		{
 			"path" : "pages/demo8/demo8",
 			"style" : 
 			{
@@ -104,9 +97,14 @@
 			{
 				"navigationBarTitleText" : "项目管理"
 			}
-		}
-		
-		
+		},
+		{
+			"path" : "pages/upload/upload",
+			"style" : 
+			{
+				"navigationBarTitleText" : "头像上传"
+			}
+		}	
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

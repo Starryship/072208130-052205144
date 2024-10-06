@@ -1,5 +1,6 @@
 import App from './App'
-
+// import * as weCropper from "./static/weCropper.js"
+// import Vue from 'vue'
 // #ifndef VUE3
 import Vue from 'vue'
 import './uni.promisify.adaptor'
