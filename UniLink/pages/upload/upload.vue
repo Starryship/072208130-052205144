@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 	<view class="content">
 		<view class="cropper-wrapper" style="height:617px">
 			<canvas
@@ -249,4 +249,4 @@ export default {
 	width: 50%;
 	text-align: center;
 }
-</style>
+</style> -->
