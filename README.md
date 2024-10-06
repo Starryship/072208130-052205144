@@ -4,9 +4,8 @@
 
 `Uni` 代表 `University（大学）`，`Link` 表示 `连接`。UniLink 表达了连接不同学科、不同背景的大学生，建立跨学科交流的桥梁。
 
-![app](/image/unilink_app.png)
 
-
+<img align="center" src="/image/unilink_app.png" alt="app" width="400"/></p>
 
 ### 页面展示
 
