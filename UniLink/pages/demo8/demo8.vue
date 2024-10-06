@@ -1,24 +1,11 @@
 <template>
   <view class="chat-app">
-    <!-- 左侧联系人列表 -->
-<!--    <view class="contact-list">
-      <view
-        v-for="contact1 in contacts1"
-        :key="contact1.id"
-        :class="['contact-item', { active: contact1.id === currentContact.id }]"
-        @click="selectContact(contact1)"
-      >
-        <img :src="contact1.avatar" alt="头像" class="avatar" />
-      </view>
-    </view> -->
-
     <!-- <!-- 右侧聊天窗口 -->
     <view class="chat-window">
       <view class="chat-header">
-        <img :src="currentContact.avatar" alt="头像" class="avatar" @click="nav()"/>
+        <img :src="currentContact.avatar" alt="头像" class="avatar" @click="nav(currentContact)"/>
         <h4>{{ currentContact.name }}</h4>
       </view>
-
       <view class="chat-content" ref="chatContent">
         <view
           v-for="message in currentContact.messages"
@@ -67,106 +54,106 @@ export default {
           lastMessage: 'Hey, how are you?',
           messages: [
             { id: 1, text: '你们的项目完成的怎么样了?', sender: '张栋', time: '10:01 AM' },
-            { id: 2, text: '哦!my dear tutor~实在是太抱歉了！完成进度堪忧啊我们', sender: 'me', time: '10:02 AM' }
+            { id: 12, text: '哦!my dear tutor~实在是太抱歉了！完成进度堪忧啊我们', sender: 'me', time: '10:02 AM' }
           ]
         },
         {
-          id: 3,
+          id: 2,
           name: '张诗雨',
           avatar: '/static/toux2.jpg',
           lastMessage: 'What’s up?',
           messages: [
-			{ id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '11:30 AM' },
+			{ id: 12, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '11:30 AM' },
 			{ id: 3, text: '还没睡醒', sender: '张诗雨', time: '11:32 AM' },
           ]
         },
 		{
-		  id: 4,
+		  id: 3,
 		  name: '詹镇號',
 		  avatar: '/static/toux10.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:01 AM' },
+		    { id: 12, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:01 AM' },
 		    { id: 4, text: '还在睡', sender: '詹镇號', time: '10:02 AM' }
 		  ]
 		},
 		{
-		  id: 5,
+		  id: 4,
 		  name: '刘哲锐',
 		  avatar: '/static/toux12.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:02 AM' },
+		    { id: 12, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:02 AM' },
 		    { id: 5, text: 'wa', sender: '刘哲锐', time: '10:15 AM' }
 		  ]
 		},
 		{
-		  id: 6,
+		  id: 5,
 		  name: '黄悦迦',
 		  avatar: '/static/toux7.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:03 AM' },
+		    { id: 12, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:03 AM' },
 		    { id: 6, text: '瓦', sender: '黄悦迦', time: '10:15 AM' }
 		  ]
 		},
 		{
-		  id: 7,
+		  id: 6,
 		  name: '朱佳捷',
 		  avatar: '/static/toux14.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:04 AM' },
+		    { id: 12, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:04 AM' },
 		    { id: 7, text: '瓦？', sender: '朱佳捷', time: '10:15 AM' }
 		  ]
 		},
 		{
-		  id: 8,
+		  id: 7,
 		  name: '吴三丰',
 		  avatar: '/static/toux8.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:05 AM' },
+		    { id: 12, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:05 AM' },
 		    { id: 8, text: '瓦罗兰特', sender: '吴三丰', time: '10:15 AM' }
 		  ]
 		},
 		{
-		  id: 9,
+		  id: 8,
 		  name: '严加一',
 		  avatar: '/static/toux6.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:06 AM' },
+		    { id: 12, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:06 AM' },
 		    { id: 9, text: '启动！！', sender: '严加一', time: '10:15 AM' }
 		  ]
 		},
 		{
-		  id: 10,
+		  id: 9,
 		  name: '黄馨贻',
 		  avatar: '/static/toux15.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:07 AM' },
+		    { id: 12, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:07 AM' },
 		    { id: 10, text: '好好好，马上马上', sender: '黄馨贻', time: '10:12 AM' }
 		  ]
 		},
 		{
-		  id: 11,
+		  id: 10,
 		  name: '韦❤茹',
 		  avatar: '/static/toux4.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:08 AM' },
+		    { id: 12, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:08 AM' },
 		    { id: 9, text: '我是一枚小可爱', sender: '韦❤茹', time: '10:10 AM' }
 		  ]
 		},
 		{
-		  id: 12,
+		  id: 11,
 		  name: '郑❤艺',
 		  avatar: '/static/toux5.jpg',
 		  lastMessage: 'Hey, how are you?',
 		  messages: [
-		    { id: 2, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:09 AM' },
+		    { id: 12, text: '你能不能好好按时完成项目?求求你咯！', sender: 'me', time: '10:09 AM' },
 		    { id: 9, text: '小韦帮我做，你找她', sender: '郑❤艺', time: '10:10 AM' }
 		  ]
 		},
@@ -177,11 +164,6 @@ export default {
     };
   },
   methods: {
-	nav(){
-		uni.navigateTo({
-			url:"/pages/demo9/demo9"
-		})
-	},
     // 选择联系人进行聊天
     selectContact(contact1) {
       this.currentContact = contact1;
@@ -190,6 +172,26 @@ export default {
         this.scrollToBottom();
       });
     },
+	nav(contact){
+		this.currentContact = contact;
+		console.log('Current contact:', this.currentContact.id);
+		// 这里可以添加跳转到聊天页面的代码，例如使用vue-router  
+		console.log('Current contact:', this.currentContact.id);  
+		if (this.currentContact && (this.currentContact.id || this.currentContact.id===0)) {
+		  console.log(this.currentContact.id);
+				uni.navigateTo({
+				  url: `/pages/demo9/demo9?id=${this.currentContact.id}`,
+				  success: () => {
+				    console.log(`跳转到项目 ID 为 ${this.currentContact.id} 的详情页面`);
+				  },
+				  fail: (err) => {
+				    console.error('跳转失败：', err);
+				  }
+				});
+		} else {
+		  console.error('currentContact 未定义或没有 id');
+		}
+	},
     // 发送消息
     sendMessage() {
       if (this.newMessage.trim() === '') return; // 如果输入为空，直接返回
@@ -219,9 +221,9 @@ export default {
   mounted() {
     // 默认选择第一个联系人
 	const contactId = this.$route.query.id; // 获取 URL 中的 id 参数
-	console.log(contactId);
+	// console.log(contactId);
 	this.ID=contactId;
-	console.log(this.ID);
+	// console.log(this.ID);
     this.currentContact = this.contacts1[this.ID];
   }
 };

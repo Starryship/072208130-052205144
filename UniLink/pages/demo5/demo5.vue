@@ -4,27 +4,27 @@
     <form @submit.prevent="addProject">
       <view>
         <label for="projectName" style="width: 95%; height: 10%; padding: 10px;">项目名称：</label>
-        <input type="text" v-model="newProject.name" id="projectName" style="width: 95%; height: 10%; padding: 10px;"/>
+        <input type="text" class="inputGray" v-model="newProject.name" id="projectName" style="width: 95%; height: 10%; padding: 10px;"/>
       </view>
       <view>
         <label for="projectDomain" style="width: 95%; height: 10%; padding: 10px;">项目领域：</label>
-        <input type="text" v-model="newProject.domain" id="projectDomain" style="width: 95%; height: 10%; padding: 10px;"/>
+        <input type="text" class="inputGray" v-model="newProject.domain" id="projectDomain" style="width: 95%; height: 10%; padding: 10px;"/>
       </view>
       <view>
         <label for="projectTalent" style="width: 95%; height: 10%; padding: 10px;">所需技能：</label>
-        <input type="text" v-model="newProject.requiredTalent" id="projectTalent" style="width: 95%; height: 10%; padding: 10px;"/>
+        <input type="text" class="inputGray" v-model="newProject.requiredTalent" id="projectTalent" style="width: 95%; height: 10%; padding: 10px;"/>
       </view>
       <view>
         <label for="projectMentor" style="width: 95%; height: 10%; padding: 10px;">指导老师：</label>
-        <input type="text" v-model="newProject.mentor" id="projectMentor" style="width: 95%; height: 10%; padding: 10px;"/>
+        <input type="text" class="inputGray" v-model="newProject.mentor" id="projectMentor" style="width: 95%; height: 10%; padding: 10px;"/>
       </view>
       <view>
         <label for="projectTime" style="width: 95%; height: 10%; padding: 10px;">项目时间：</label>
-        <input type="text" v-model="newProject.time" id="projectTime" placeholder="如：2023.10.12-2025.10.12" style="width: 95%; height: 10%; padding: 10px;"/>
+        <input type="text" class="inputGray" v-model="newProject.time" id="projectTime" placeholder="如：2023.10.12-2025.10.12" style="width: 95%; height: 10%; padding: 10px;"/>
       </view>
       <view>
         <label for="projectIntro" style="width: 95%; height: 10%; padding: 10px;">项目简介：</label>
-        <textarea v-model="newProject.inroduction" id="projectIntro" style="padding: 10px;"></textarea>
+        <textarea class="inputGray1" v-model="newProject.inroduction" id="projectIntro" style="padding: 10px;"></textarea>
       </view>
       <view>
         <label for="projectTarget" style="width: 95%; height: 10%; padding: 10px;">项目目标：</label>
@@ -33,34 +33,16 @@
       </view>
       <view>
         <label for="projectMembers" style="width: 95%; height: 10%; padding: 10px;">队员（用逗号分隔）：</label>
-        <input type="text" style="width: 95%; height: 10%; padding: 10px;" v-model="newProject.memberInput" id="projectMembers" placeholder="如：Bob, Alice, Chris" />
+        <input type="text" class="inputGray" style="width: 95%; height: 10%; padding: 10px;" v-model="newProject.memberInput" id="projectMembers" placeholder="如：Bob, Alice, Chris" />
       </view>
       <view>
         <label for="projectTasks" style="width: 95%; height: 10%; padding: 10px;">任务列表（用逗号分隔）：</label>
-        <input type="text" v-model="newProject.taskListInput" id="projectTasks" placeholder="如：原型设计, 编程实现" style="width: 95%; height: 10%; padding: 10px;" />
+        <input type="text" class="inputGray" v-model="newProject.taskListInput" id="projectTasks" placeholder="如：原型设计, 编程实现" style="width: 95%; height: 10%; padding: 10px;" />
       </view>
 	  
 	  <br/>
       <button type="submit" class="add-button" @click="addProject">创建项目</button>
     </form>
-
-    <!-- 显示项目列表 -->
-<!--   <view class="project-list">
-      <h2>项目列表</h2>
-      <view v-for="(project, index) in projectList" :key="project.id" class="project-item">
-        <h3>{{ index + 1 }}. {{ project.name }}</h3>
-        <p>领域：{{ project.domain }}</p>
-        <p>所需技能：{{ project.requiredTalent }}</p>
-        <p>指导老师：{{ project.mentor }}</p>
-        <p>项目时间：{{ project.time }}</p>
-        <p>简介：{{ project.inroduction }}</p>
-        <p>目标：{{ project.target }}</p>
-        <p>队员：{{ project.member.join(", ") }}</p>
-        <p>任务列表：{{ project.taskList.join(", ") }}</p>
-      </view>
-    </view> -->
-	
-	
   </view>
 </template>
 
@@ -180,105 +162,89 @@ export default {
 
 
 <style scoped>
-/* 样式定义 */
+/* 表单样式 */
 form {
-  margin: 30px;
-
-}
-
-form view {
-  margin-bottom: 20px;
-  left: 10%;
-    width: 90%;
-	height: 10%;
-}
-
-label {
+  margin: 5px;
+  margin-right: 25px;
   display: flex;
-  width: 100px;
-  height: 10%;
-  
-  left:30px;
+  flex-direction: column;
+  align-items: center;
 }
 
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #333;
+}
 
+.input-field, .textarea-field {
+  width: 95%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  background-color: #F;
+  font-size: 14px;
+  color: #333;
+}
 
+.textarea-field {
+  height: 100px;
+  resize: none;
+}
+
+/* 提交按钮样式 */
 .add-button {
+  width: 95%;
   background-color: #1e90ff;
   color: white;
+  padding: 12px;
   border: none;
-  padding: 10px 15px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 18px;
+  text-align: center;
 }
 
 .add-button:hover {
   background-color: #4682b4;
 }
 
-.project-list {
-  margin-top: 20px;
+.add-button:active {
+  background-color: #3c8dbc;
+  transform: scale(0.98);
 }
-
-.project-item {
-  border: 1px solid #ddd;
+.inputGray{
+	width: 95%;
+	padding: 12px;
+	border: 2px solid #ccc;
+	border-radius: 10px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+	background-color: #FFF;
+	font-size: 14px;
+	color: #333;
+}
+.inputGray1{
+	/* width: 100%; */
+	padding: 12px;
+	border: 2px solid #ccc;
+	border-radius: 10px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+	background-color: #FFF;
+	font-size: 14px;
+	color: #333;
+}
+/* 其他样式 */
+view {
+  width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
 }
 
-
-input[type=text] {
-  width: 80%;
-  height: 10px;
-  
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 2px solid #ccc;
-  border-radius: 7px;
-  box-sizing: border-box;
-  
-
-  
+body {
+  background-color: #f0f4f7;
 }
-
-/* .inputGray{
-	height:20%;
-} */
-
-
-button[type=submit] {
-	
-  width: 80%;
-  height: 50px;
-  
-  background-color: #4CAF50;
-  color: white;
-  padding-bottom: 10px;
-  margin: 8px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  
-left: 30px;
-bottom:5px;
-
-  text-align: center; /* 水平居中 */
-  line-height: 30px; /* 设置行高与按钮高度相等，垂直居中 */
-  font-size: 20px; /* 文字大小 */
-
-
-  
-}
-
-button[type=submit]:hover {
-  background-color: #45a049;
-}
-
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-
 </style>

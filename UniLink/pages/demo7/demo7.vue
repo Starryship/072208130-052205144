@@ -75,10 +75,6 @@ export default {
 	  } else {
 	    console.error('selectedContact 未定义或没有 id');
 	  }
-
-      // 假设你有一个方法或路由可以导航到聊天页面  
-      this.$router.push({ name: 'Chat', params: { contactId: contact.id } });  
-	  this.$router.push({ name: 'ContactDetail', params: { id: contact.id, contact: contact } });
     },  
 	openPopup() {  
 	      this.visible = true;  
