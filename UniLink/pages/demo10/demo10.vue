@@ -17,7 +17,7 @@
         </view>
         <view class="profile-picture">
           <img :src="src" alt="profile" class="avatar" @tap="upload" />
-		  <button class="btn" @tap="upload">更换头像</button>
+		  <button class="btn">更换头像</button>
         </view>
       </view>
 
