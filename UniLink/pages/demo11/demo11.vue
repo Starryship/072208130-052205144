@@ -91,7 +91,6 @@ h1 {
   
 .options {  
   display: flex;  
-  
   flex-direction: column;  
   gap: 30px;  
 }  
