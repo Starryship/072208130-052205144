@@ -4,7 +4,7 @@
 
 `Uni` 代表 `University（大学）`，`Link` 表示 `连接`。UniLink 表达了连接不同学科、不同背景的大学生，建立跨学科交流的桥梁。
 
-app图标(picture)
+![app](/image/unilink_app.png)
 
 
 
@@ -12,7 +12,7 @@ app图标(picture)
 
 ------
 
-![demo](C:\Users\starry\Desktop\class\software\homework\work4\image_github\demo.gif)
+![demo](/image/demo.gif)
 
 
 
@@ -24,25 +24,25 @@ app图标(picture)
 
 输入基本信息，注册账号
 
-![demo2](C:\Users\starry\Desktop\class\software\homework\work4\image_github\demo2.gif)
+![demo2](image/demo2.gif)
 
 #### 申请项目
 
 根据推荐的项目，可自主选择心仪的项目进行申请
 
-![demo3](C:\Users\starry\Desktop\class\software\homework\work4\image_github\demo3.gif)
+![demo3](image/demo3.gif)
 
 #### 任务安排
 
 对于已经参加的项目，我们可以选择管理，进行任务分配
 
-![demo4](C:\Users\starry\Desktop\class\software\homework\work4\image_github\demo4.gif)
+![demo4](image/demo4.gif)
 
 #### 创建项目
 
 可以进行新项目的创建
 
-![demo5](C:\Users\starry\Desktop\class\software\homework\work4\image_github\demo5.gif)
+![demo5](image/demo5.gif)
 
 
 
@@ -50,13 +50,13 @@ app图标(picture)
 
 可以此和合作伙伴一起聊天
 
-![demo6](C:\Users\starry\Desktop\class\software\homework\work4\image_github\demo6.gif)
+![demo6](image/demo6.gif)
 
 #### 添加好友
 
 添加新的合作伙伴
 
-![demo7](C:\Users\starry\Desktop\class\software\homework\work4\image_github\demo7.gif)
+![demo7](image/demo7.gif)
 
 
 
@@ -74,7 +74,7 @@ app图标(picture)
 
 1. 我们使用的开发工具为HBuilderX，可点击以下链接根据**操作系统**进行选择下载**正式版**，：[HBuilderX-高效极客技巧 (dcloud.io)](https://www.dcloud.io/hbuilderx.html)
 
-![QQ截图20241006204033](C:\Users\starry\Desktop\class\software\homework\work4\image_github\QQ截图20241006204033.jpg)
+![QQ截图20241006204033](image/QQ截图20241006204033.jpg)
 
 2. 将本仓库克隆下来
 
@@ -82,39 +82,39 @@ app图标(picture)
 
 3. 打开HBuilderX，点击`文件->导入->从本地目录导入`
 
-![QQ截图20241006205527](C:\Users\starry\Desktop\class\software\homework\work4\image_github\QQ截图20241006205527.jpg)
+![QQ截图20241006205527](image/QQ截图20241006205527.jpg)
 
 4. 选择刚刚克隆下来的文件
 
-![QQ截图20241006205628](C:\Users\starry\Desktop\class\software\homework\work4\image_github\QQ截图20241006205628.jpg)
+![QQ截图20241006205628](image/QQ截图20241006205628.jpg)
 
 5. 点击运行，选择运行到内置浏览器或者外部浏览器都可以
 
-![QQ截图20241006205756](C:\Users\starry\Desktop\class\software\homework\work4\image_github\QQ截图20241006205756.jpg)
+![QQ截图20241006205756](image/QQ截图20241006205756.jpg)
 
-![QQ截图20241006205808](C:\Users\starry\Desktop\class\software\homework\work4\image_github\QQ截图20241006205808.jpg)
+![QQ截图20241006205808](image/QQ截图20241006205808.jpg)
 
 7.运行至内置浏览器，修改运行模拟器为iPhone 6/7/8
 
-![QQ截图20241006210423](C:\Users\starry\Desktop\class\software\homework\work4\image_github\QQ截图20241006210423.jpg)
+![QQ截图20241006210423](image/QQ截图20241006210423.jpg)
 
 
 
-![QQ截图20241006210501](C:\Users\starry\Desktop\class\software\homework\work4\image_github\QQ截图20241006210501.jpg)
+![QQ截图20241006210501](image/QQ截图20241006210501.jpg)
 
 8.运行至外部浏览器，`点击右键->点击检查`
 
 
 
-> ![QQ截图20241006210934](C:\Users\starry\Desktop\class\software\homework\work4\image_github\QQ截图20241006210934.jpg)
+> ![QQ截图20241006210934](image/QQ截图20241006210934.jpg)
 >
 > 修改为移动设备展示
 >
-> ![QQ截图20241006211034](C:\Users\starry\Desktop\class\software\homework\work4\image_github\QQ截图20241006211034.jpg)
+> ![QQ截图20241006211034](image/QQ截图20241006211034.jpg)
 >
 > 成功显示
 >
-> ![QQ截图20241006211046](C:\Users\starry\Desktop\class\software\homework\work4\image_github\QQ截图20241006211046.jpg)
+> ![QQ截图20241006211046](image/QQ截图20241006211046.jpg)
 
 
 
