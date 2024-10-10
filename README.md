@@ -121,7 +121,7 @@
 
 ------
 
-该app使用uniCloud进行前端网页托管，已经部署到云服务器上了，想要使用该app可以点击以下链接直接使用：https://static-mp-6cbf5855-4ae2-4eb0-9d2e-286e1c78e64a.next.bspapp.com/UniLink/index.html#/
+该app使用uniCloud进行前端网页托管，已经部署到云服务器上了，想要使用该app可以点击以下链接直接使用：static-mp-6cbf5855-4ae2-4eb0-9d2e-286e1c78e64a.next.bspapp.com
 
 > 因为我们制作的是移动端app，所以在电脑打开此链接需要按照上面“编译器运行”方式中的步骤八调整网页，使其能正常显示。
 >
